@@ -24,4 +24,5 @@ Install the `org.jfree` project, by right clicking on the project and selecting 
 
 To install `toolbox.auditmon` repeat the `Export` steps with the `toolbox.auditmon` project.
 
-
+## Usage
+AuditMon can be used programatically or directly through the Atlas shell.  To use with the Atlas Shell, import the `toolbox.shell` project into the workspace and navigate to `Window`->`Show View`->`Other...`->`Atlas`->`Atlas Shell`.  Select the `toolbox.shell` project and press `OK`.
