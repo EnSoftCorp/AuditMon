@@ -33,13 +33,15 @@ import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.part.ViewPart;
 
 import toolbox.auditmon.AuditConstants;
-import toolbox.auditmon.DOIModel;
+import toolbox.auditmon.doi.DOIModel;
 import util.UIUtils;
 
 import com.ensoftcorp.atlas.core.db.graph.GraphElement;
 import com.ensoftcorp.atlas.core.query.Attr.Node;
 import com.ensoftcorp.atlas.java.core.script.Common;
-import com.ensoftcorp.atlas.java.ui.selection.AtlasSelectionEvent;
+import com.ensoftcorp.atlas.ui.selection.IAtlasSelectionListener;
+import com.ensoftcorp.atlas.ui.selection.SelectionUtil;
+import com.ensoftcorp.atlas.ui.selection.event.IAtlasSelectionEvent;
 
 public class DegreeOfInterestView extends ViewPart {
 
@@ -334,7 +336,7 @@ public class DegreeOfInterestView extends ViewPart {
 		// allow the view to register for selection events and update the DOI table
 		SelectionUtil.addSelectionListener(new IAtlasSelectionListener(){
 			@Override
-			public void selectionChanged(AtlasSelectionEvent arg0) {
+			public void selectionChanged(IAtlasSelectionEvent selectionEvent) {
 				if(synchronize){
 					refreshTable(sessionText, granularityComboBox, decayRateText, interestIncrementText, interestThresholdText);
 				}

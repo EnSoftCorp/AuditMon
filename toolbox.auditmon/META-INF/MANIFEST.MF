@@ -11,6 +11,7 @@ Require-Bundle: org.eclipse.ui,
  com.ensoftcorp.atlas.java.core;bundle-version="2.0.2";visibility:=reexport,
  com.ensoftcorp.atlas.java.ui;bundle-version="2.0.2";visibility:=reexport,
  com.ensoftcorp.atlas.core;bundle-version="2.0.2";visibility:=reexport,
+ com.ensoftcorp.atlas.ui;bundle-version="2.0.1",
  org.apache.commons.io;bundle-version="2.2.0";visibility:=reexport,
  org.apache.commons.lang3;bundle-version="3.1.0";visibility:=reexport,
  org.jfree;bundle-version="1.0.0";visibility:=reexport

@@ -11,13 +11,17 @@ import com.ensoftcorp.atlas.core.db.graph.GraphElement.EdgeDirection;
 import com.ensoftcorp.atlas.core.db.set.AtlasSet;
 import com.ensoftcorp.atlas.core.indexing.IIndexListener;
 import com.ensoftcorp.atlas.core.indexing.IndexingUtil;
+import com.ensoftcorp.atlas.core.licensing.AtlasLicenseException;
 import com.ensoftcorp.atlas.core.log.Log;
 import com.ensoftcorp.atlas.core.query.Attr.Edge;
 import com.ensoftcorp.atlas.core.query.Attr.Node;
 import com.ensoftcorp.atlas.core.query.Q;
 //import com.ensoftcorp.atlas.java.ui.selection.IAtlasSelectionListener;
 import com.ensoftcorp.atlas.core.script.Common;
-import com.ensoftcorp.atlas.java.ui.SelectionUtil;
+import com.ensoftcorp.atlas.ui.selection.IAtlasSelectionListener;
+import com.ensoftcorp.atlas.ui.selection.SelectionUtil;
+import com.ensoftcorp.atlas.ui.selection.event.IAtlasSelectionEvent;
+import com.ensoftcorp.atlas.ui.selection.event.IEditorAtlasSelectionEvent;
 
 public class AuditMon {
 
@@ -78,7 +82,7 @@ public class AuditMon {
 	
 	IAtlasSelectionListener selectionListener = new IAtlasSelectionListener(){
 		@Override
-		public void selectionChanged(AtlasSelectionEvent atlasSelection) {
+		public void selectionChanged(IAtlasSelectionEvent atlasSelection) {
 			if(monitoring){
 				try {
 					long currentTime = System.currentTimeMillis();
@@ -92,7 +96,11 @@ public class AuditMon {
 					origin = originType + ":" + originName;
 					
 					// get the selection (or all possible resolved selections)
-					Q selection = atlasSelection.getConversionsUnion();
+					Q selection = atlasSelection.getSelection();
+					if(atlasSelection instanceof IEditorAtlasSelectionEvent){
+						IEditorAtlasSelectionEvent atlasEditorSelection = (IEditorAtlasSelectionEvent) atlasSelection;
+						selection = atlasEditorSelection.getIdentifier().union(atlasEditorSelection.getControlFlow(), atlasEditorSelection.getDataFlow());
+					}
 					
 					// make the observation
 					makeObservation(selection, currentTime, origin);
@@ -162,16 +170,18 @@ public class AuditMon {
 	 * Saves a copy of the index to the given path
 	 * @param path
 	 * @throws InterruptedException
+	 * @throws AtlasLicenseException 
 	 */
-	public void saveIndex(String path) throws InterruptedException {
+	public void saveIndex(String path) throws InterruptedException, AtlasLicenseException {
 		IndexingUtil.saveIndex(path).join();
 	}
 	
 	/**
 	 * Updates the current index
 	 * @throws IOException
+	 * @throws AtlasLicenseException 
 	 */
-	public void saveIndex() throws IOException {
+	public void saveIndex() throws IOException, AtlasLicenseException {
 		IndexingUtil.saveIndex();
 	}
 	

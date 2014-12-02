@@ -16,6 +16,7 @@ import org.eclipse.swt.widgets.MessageBox;
 import com.ensoftcorp.atlas.core.highlight.Highlighter;
 import com.ensoftcorp.atlas.core.query.Attr.Edge;
 import com.ensoftcorp.atlas.core.query.Q;
+import com.ensoftcorp.atlas.ui.viewer.graph.DisplayUtil;
 
 public class UIUtils {
 
