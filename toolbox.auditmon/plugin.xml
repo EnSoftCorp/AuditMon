@@ -9,13 +9,6 @@
             id="AuditMon">
       </category>
       <view
-            category="AuditMon"
-            class="toolbox.auditmon.views.AuditMonView"
-            icon="icons/main-icon.gif"
-            id="auditmon.views.AuditMonView"
-            name="AuditMon">
-      </view>
-      <view
             allowMultiple="false"
             category="AuditMon"
             class="toolbox.auditmon.views.DegreeOfInterestView"
@@ -24,7 +17,5 @@
             name="Degree Of Interest">
       </view>
    </extension>
-   
-   
 
 </plugin>

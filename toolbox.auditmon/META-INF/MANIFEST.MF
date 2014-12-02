@@ -18,10 +18,7 @@ Require-Bundle: org.eclipse.ui,
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Bundle-ActivationPolicy: lazy
 Bundle-ClassPath: .
-Export-Package: toolbox,
- toolbox.auditmon,
+Export-Package: toolbox.auditmon,
  toolbox.auditmon.charts,
  toolbox.auditmon.doi,
- toolbox.auditmon.smartviews,
- toolbox.auditmon.views,
  util
