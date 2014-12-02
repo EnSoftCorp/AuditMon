@@ -1,57 +1,43 @@
 package toolbox.auditmon.smartviews;
 
+import java.awt.Color;
+
 import org.eclipse.core.runtime.IProgressMonitor;
 
+import toolbox.auditmon.AuditMon;
+
+import com.ensoftcorp.atlas.core.highlight.Highlighter;
+import com.ensoftcorp.atlas.core.query.Q;
+import com.ensoftcorp.atlas.core.script.Common;
 import com.ensoftcorp.atlas.core.script.StyledResult;
 import com.ensoftcorp.atlas.ui.scripts.selections.AtlasSmartViewScript;
 import com.ensoftcorp.atlas.ui.selection.event.IAtlasSelectionEvent;
+import com.ensoftcorp.atlas.ui.selection.event.IEditorAtlasSelectionEvent;
 
 
 public class ObservationsGraph implements AtlasSmartViewScript {
 
 	@Override
 	public String getTitle() {
-		// TODO Auto-generated method stub
-		return null;
+		return "Observations Graph";
 	}
 
 	@Override
-	public void indexChanged(IProgressMonitor arg0) {
-		// TODO Auto-generated method stub
-		
-	}
+	public void indexChanged(IProgressMonitor monitor) {}
 
 	@Override
-	public void indexCleared() {
-		// TODO Auto-generated method stub
-		
-	}
+	public void indexCleared() {}
 
 	@Override
-	public StyledResult selectionChanged(IAtlasSelectionEvent arg0) {
-		// TODO Auto-generated method stub
-		return null;
+	public StyledResult selectionChanged(IAtlasSelectionEvent atlasSelection) {
+		Highlighter h = new Highlighter();
+		Q selection = atlasSelection.getSelection();
+		if(atlasSelection instanceof IEditorAtlasSelectionEvent){
+			IEditorAtlasSelectionEvent atlasEditorSelection = (IEditorAtlasSelectionEvent) atlasSelection;
+			selection = atlasEditorSelection.getIdentifier().union(atlasEditorSelection.getControlFlow(), atlasEditorSelection.getDataFlow());
+		}
+		h.highlight(selection, Color.DARK_GRAY);
+		return new StyledResult(Common.universe().reverseStep(Common.universe().nodesTaggedWithAny(AuditMon.OBSERVATION)), h);
 	}
-	
-//	@Override
-//	public String[] getSupportedEdgeTags() {
-//		return new String[0];
-//	}
-//
-//	@Override
-//	public String[] getSupportedNodeTags() {
-//		return new String[]{Node.PROJECT, Node.PACKAGE, Node.CLASS, Node.TYPE, Node.FIELD, Node.METHOD, Node.DATA_FLOW, Node.CONTROL_FLOW};
-//	}
-//
-//	@Override
-//	public String getTitle() {
-//		return "Observations Graph";
-//	}
-//
-//	@Override
-//	public StyledResult selectionChanged(SelectionInput arg0) {
-//		Highlighter h = new Highlighter();
-//		return new StyledResult(Common.universe().reverseStep(Common.universe().nodesTaggedWithAny(AuditMon.OBSERVATION)), h);
-//	}
 
 }
