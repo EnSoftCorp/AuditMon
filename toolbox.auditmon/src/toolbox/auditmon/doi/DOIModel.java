@@ -11,9 +11,8 @@ import java.util.Map.Entry;
 
 import org.apache.commons.lang3.mutable.MutableDouble;
 
-import toolbox.auditmon.AuditConstants;
-import toolbox.auditmon.AuditUtils;
 import toolbox.auditmon.AuditConstants.Granularity;
+import toolbox.auditmon.AuditUtils;
 import toolbox.auditmon.AuditUtils.AbstractObservation;
 import toolbox.auditmon.AuditUtils.ObservationType;
 

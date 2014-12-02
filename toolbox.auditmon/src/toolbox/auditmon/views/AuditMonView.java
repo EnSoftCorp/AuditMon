@@ -7,9 +7,9 @@ import org.eclipse.ui.ISharedImages;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.part.ViewPart;
 
+// TODO: Complete this view
 public class AuditMonView extends ViewPart {
-	public AuditMonView() {
-	}
+	public AuditMonView() {}
 
 	/**
 	 * The ID of the view as specified by the extension.

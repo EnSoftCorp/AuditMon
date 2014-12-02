@@ -1,6 +1,6 @@
 package util;
 
-import static com.ensoftcorp.atlas.java.core.script.Common.extend;
+import static com.ensoftcorp.atlas.core.script.Common.extend;
 
 import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
