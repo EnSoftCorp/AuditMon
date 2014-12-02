@@ -2,9 +2,9 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: AuditMon
 Bundle-SymbolicName: toolbox.auditmon;singleton:=true
-Bundle-Version: 0.23.1.qualifier
+Bundle-Version: 2.0.2.qualifier
 Bundle-Activator: toolbox.Activator
-Bundle-Vendor: Iowa State University
+Bundle-Vendor: Ben Holland
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  org.eclipse.core.resources,
