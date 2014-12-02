@@ -17,5 +17,6 @@ Require-Bundle:
  com.ensoftcorp.atlas.core;bundle-version="2.0.2",
  com.ensoftcorp.atlas.java.core;bundle-version="2.0.2",
  com.ensoftcorp.atlas.java.ui;bundle-version="2.0.2",
+ com.ensoftcorp.atlas.ui;bundle-version="2.0.1",
  com.ensoftcorp.atlas.ui.shell;bundle-version="2.0.1",
  toolbox.auditmon;bundle-version="2.0.2"
