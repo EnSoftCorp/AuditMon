@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="AuditMon"
+            id="AuditMon">
+      </category>
+      <view
+            category="AuditMon"
+            class="toolbox.auditmon.views.AuditMonView"
+            icon="icons/main-icon.gif"
+            id="auditmon.views.AuditMonView"
+            name="AuditMon">
+      </view>
+      <view
+            allowMultiple="false"
+            category="AuditMon"
+            class="toolbox.auditmon.views.DegreeOfInterestView"
+            icon="icons/main-icon.gif"
+            id="auditmon.views.DegreeOfInterestView"
+            name="Degree Of Interest">
+      </view>
+   </extension>
+   
+   
+
+</plugin>
