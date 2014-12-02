@@ -5,12 +5,11 @@
       version="2.0.2.qualifier"
       provider-name="Ben Holland">
 
-   <description url="http://www.auditmon.com">
-      A tool for recording and analyzing human Code Exploration Trails
-during code audits.
+   <description url="http://auditmon.com">
+      A tool for recording and analyzing human Code Exploration Trails during code audits.
    </description>
 
-   <copyright url="http://www.auditmon.com">
+   <copyright url="http://auditmon.com">
       Copyright (c) 2014 Ben Holland
    </copyright>
 
@@ -40,10 +39,13 @@ SOFTWARE.
 
    <url>
       <update label="auditmon.com" url="http://auditmon.com/updates/"/>
-      <discovery label="auditmon.com" url="http://www.auditmon.com/updates"/>
+      <discovery label="auditmon.com" url="http://auditmon.com/updates/"/>
    </url>
 
    <requires>
+      <import feature="com.ensoftcorp.atlas.c.feature" version="2.0.2.201411261533"/>
+      <import feature="com.ensoftcorp.atlas.feature" version="2.0.2.201411261533"/>
+      <import feature="com.ensoftcorp.atlas.java.feature" version="2.0.2.201411261533"/>
       <import plugin="org.eclipse.ui"/>
       <import plugin="org.eclipse.core.runtime"/>
       <import plugin="org.eclipse.core.resources"/>
@@ -53,23 +55,21 @@ SOFTWARE.
       <import plugin="com.ensoftcorp.atlas.ui" version="2.0.1" match="greaterOrEqual"/>
       <import plugin="org.apache.commons.io" version="2.2.0" match="greaterOrEqual"/>
       <import plugin="org.apache.commons.lang3" version="3.1.0" match="greaterOrEqual"/>
-      <import feature="com.ensoftcorp.atlas.c.feature" version="2.0.2.201411261533"/>
-      <import feature="com.ensoftcorp.atlas.feature" version="2.0.2.201411261533"/>
-      <import feature="com.ensoftcorp.atlas.java.feature" version="2.0.2.201411261533"/>
+      <import plugin="org.jfree" version="1.0.0" match="greaterOrEqual"/>
    </requires>
 
    <plugin
          id="org.jfree"
          download-size="0"
          install-size="0"
-         version="1.0.0"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="toolbox.auditmon"
          download-size="0"
          install-size="0"
-         version="2.0.2.qualifier"
+         version="0.0.0"
          unpack="false"/>
 
 </feature>
