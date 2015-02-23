@@ -39,6 +39,7 @@ import com.ensoftcorp.atlas.ui.selection.IAtlasSelectionListener;
 import com.ensoftcorp.atlas.ui.selection.SelectionUtil;
 import com.ensoftcorp.atlas.ui.selection.event.IAtlasSelectionEvent;
 import com.ensoftcorp.open.auditmon.AuditConstants;
+import com.ensoftcorp.open.auditmon.AuditMon;
 import com.ensoftcorp.open.auditmon.doi.DOIModel;
 import com.ensoftcorp.open.toolbox.commons.utils.DisplayUtils;
 
@@ -52,6 +53,7 @@ public class DegreeOfInterestView extends ViewPart {
 	private TableViewer viewer;
 	private boolean synchronize = false;
 	private HashMap<GraphElement,Double> doi = null;
+	private AuditMon am;
 	
 	class ViewContentProvider implements IStructuredContentProvider {
 		
@@ -200,11 +202,22 @@ public class DegreeOfInterestView extends ViewPart {
 					this.setToolTipText("Synchronize");
 					this.setImageDescriptor(PlatformUI.getWorkbench().getSharedImages().getImageDescriptor(ISharedImages.IMG_ELCL_SYNCED));
 					sessionText.setEnabled(true);
+					if(am != null){
+						am.stop();
+					}
 				} else {
 					if(sessionText.getText().trim().equals("")){
 						DisplayUtils.showMessage("Please enter an AuditMon session.");
 						return;
 					}
+					
+					if(am == null){
+						am = new AuditMon(sessionText.getText());
+					} else if(!am.getSessionName().equals(sessionText.getText())){
+						am = new AuditMon(sessionText.getText());
+					}
+					am.start();
+					
 					this.setText("Unsynchronize");
 					this.setToolTipText("Unsynchronize");
 					this.setImageDescriptor(PlatformUI.getWorkbench().getSharedImages().getImageDescriptor(ISharedImages.IMG_ELCL_STOP));
