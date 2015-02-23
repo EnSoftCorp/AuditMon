@@ -1,0 +1,3 @@
+# allow bytecode in this directory
+!.class
+!.jar
