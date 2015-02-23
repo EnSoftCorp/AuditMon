@@ -20,5 +20,5 @@ import com.ensoftcorp.atlas.core.db.graph.Graph
 import java.awt.Color
 
 // auditmon
-import toolbox.auditmon._
-import toolbox.auditmon.charts._
+import com.ensoftcorp.open.auditmon._
+import com.ensoftcorp.open.auditmon.charts._
