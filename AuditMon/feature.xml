@@ -2,8 +2,8 @@
 <feature
       id="AuditMon"
       label="AuditMon"
-      version="2.0.2.qualifier"
-      provider-name="Ben Holland">
+      version="2.0.6.qualifier"
+      provider-name="EnSoft Corp.">
 
    <description url="http://auditmon.com">
       A tool for recording and analyzing human Code Exploration Trails during code audits.
@@ -62,14 +62,14 @@ SOFTWARE.
          id="org.jfree"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.0.0"
          unpack="false"/>
 
    <plugin
-         id="toolbox.auditmon"
+         id="com.ensoftcorp.open.auditmon"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="2.0.6.qualifier"
          unpack="false"/>
 
 </feature>
