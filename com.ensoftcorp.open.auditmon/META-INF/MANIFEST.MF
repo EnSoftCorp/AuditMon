@@ -19,3 +19,12 @@ Require-Bundle:
 Bundle-ActivationPolicy: lazy
 Bundle-ClassPath: .
 Bundle-Activator: com.ensoftcorp.open.Activator
+Export-Package: com.ensoftcorp.open.auditmon;
+  uses:="com.ensoftcorp.atlas.core.db.set,
+   com.ensoftcorp.atlas.core.query,
+   com.ensoftcorp.atlas.core.db.graph,
+   org.eclipse.swt.widgets,
+   com.ensoftcorp.atlas.ui.selection",
+ com.ensoftcorp.open.auditmon.charts,
+ com.ensoftcorp.open.auditmon.doi,
+ com.ensoftcorp.open.auditmon.smartviews

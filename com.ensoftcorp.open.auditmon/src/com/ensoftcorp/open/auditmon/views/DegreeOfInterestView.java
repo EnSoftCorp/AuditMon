@@ -47,7 +47,7 @@ public class DegreeOfInterestView extends ViewPart {
 	/**
 	 * The ID of the view as specified by the extension.
 	 */
-	public static final String ID = "auditmon.views.DegreeOfInterestView";
+	public static final String ID = "com.ensoftcorp.open.auditmon.views.DegreeOfInterestView";
 	
 	private TableViewer viewer;
 	private boolean synchronize = false;
