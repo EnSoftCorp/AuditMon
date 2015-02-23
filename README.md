@@ -12,7 +12,7 @@ Navigate to [http://www.auditmon.com/install.html](http://www.auditmon.com/insta
 
 ### Option B) Installing from Source
 
-  - Import the `toolbox.auditmon` and `org.jfree` projects.
+  - Import the `com.ensoftcorp.open.auditmon` and `org.jfree` projects.
   - Please use the Orbit project to satisfy common missing dependencies.
     
     You should install the following plugins from
@@ -22,7 +22,7 @@ Navigate to [http://www.auditmon.com/install.html](http://www.auditmon.com/insta
 
 Install the `org.jfree` project, by right clicking on the project and selecting `Export`.  Select `Plug-in Development`->`Deployable plug-ins and fragments`.  Select the `Install into host. Repository:` radio box and click `Finish`.  Press `OK` for the notice about unsigned software.  Once Eclipse restarts the plugin is installed and it is advisable to close or remove the `org.jfree` project from the workspace.
 
-To install `toolbox.auditmon` repeat the `Export` steps with the `toolbox.auditmon` project.
+To install `com.ensoftcorp.open.auditmon` repeat the `Export` steps with the `com.ensoftcorp.open.auditmon` project.
 
 ## Usage
-AuditMon can be used programatically or directly through the Atlas shell.  To use with the Atlas Shell, import the `toolbox.shell` project into the workspace and navigate to `Window`->`Show View`->`Other...`->`Atlas`->`Atlas Shell`.  Select the `toolbox.shell` project and press `OK`.
+AuditMon can be used programatically or directly through the Atlas shell.  To use with the Atlas Shell, import the `example.shell` project into the workspace and navigate to `Window`->`Show View`->`Other...`->`Atlas`->`Atlas Shell`.  Select the `example.shell` project and press `OK`.
