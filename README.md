@@ -4,11 +4,11 @@ AuditMon
 ## Background
 AuditMon is a tool for recording and analyzing human Code Exploration Trails during code audits.
 
-For additional details see [AuditMon.com](http://auditmon.com/ "AuditMon.com").
+For additional details see [https://ensoftcorp.github.io/AuditMon](https://ensoftcorp.github.io/AuditMon).
 
 ## Setup
 ### Option A) Install from Eclipse Update Site
-Navigate to [http://www.auditmon.com/install.html](http://www.auditmon.com/install.html "http://www.auditmon.com/install.html") and follow installation instructions.
+Navigate to [https://ensoftcorp.github.io/AuditMon/install.html](https://ensoftcorp.github.io/AuditMon/install.html) and follow installation instructions.
 
 ### Option B) Installing from Source
 
