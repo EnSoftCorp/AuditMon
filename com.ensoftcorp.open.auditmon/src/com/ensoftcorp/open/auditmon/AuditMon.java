@@ -52,6 +52,14 @@ public class AuditMon {
 	// TODO: clean up this hack, if set to false this prevents writing to the index and works in journaling mode only
 	private boolean updateIndex = true;
 	
+	public boolean isUpdatingIndex(){
+		return updateIndex;
+	}
+	
+	public void setUpdateIndex(boolean updateIndex) {
+		this.updateIndex = updateIndex;
+	}
+
 	private IIndexListener indexListener = new IIndexListener() {
 		@Override
 		public void indexOperationCancelled(IndexOperation io) {
