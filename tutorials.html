@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>AuditMon - Tutorials</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>AuditMon</h1>
+          <h2>A tool for recording and analyzing human Code Exploration Trails during code audits</h2>
+          <br />
+          <center>
+            <b><a href="./index.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="./install.html">Install</a>&nbsp;&nbsp;&nbsp;&nbsp;Tutorials</b>
+          </center>
+        </header>
+        <center>
+            <b><a href="#Setup">Setup</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#RunningExamples">Running Examples</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#Examples">Examples</a></b>
+        </center>
+        
+        <hr>
+
+        <section id="main_content">
+
+        <h3><a name="Setup" class="anchor" href="#Setup"><span class="octicon octicon-link"></span></a>Setup</h3>
+        <p>If you haven't already, <a href="./install.html">install</a> the AuditMon plugin into Eclipse.</p>
+        
+        <h3><a name="RunningExamples" class="anchor" href="#RunningExamples"><span class="octicon octicon-link"></span></a>Running Examples</h3>
+        
+		<p>The easiest way to try out AuditMon is to use the provided <code>example.shell</code> project.  The <code>example.shell</code> Atlas Shell project already has the dependencies on AuditMon setup for you.</p>
+        <pre><code>git clone https://github.com/EnSoftCorp/AuditMon</code></pre>
+        <p>Import the <code>example.shell</code> project into the Eclipse workspace.  Navigate to <code>Window</code>&gt;<code>Show View</code>&gt;<code>Other...</code>&gt;<code>Atlas</code>&gt;<code>Atlas Shell</code>.  Select the <code>example.shell</code> project and press <code>OK</code>.  You should also import an Eclipse project to analyze.</p>
+        <p>Navigate to <code>Atlas</code>&gt;<code>Manage Project Settings</code> and ensure that only the Eclipse project to analyze is in the window on the right for projects to be indexed.  Next index the project by pressing the Index Workspace button or navigating to <code>Atlas</code>&gt;<code>Index Workspace</code>.</p>
+		
+        <p>To run the examples below, copy and paste the code snippets into your toolbox project and/or invoke from the Atlas Shell.</p>
+        
+        <h3><a name="Examples" class="anchor" href="#Examples"><span class="octicon octicon-link"></span></a>Examples</h3>
+        <p>The AuditMon project contains several analysis utilities that may or may not be applicable to your specific analysis needs.  The table of contents below categorizes the examples by general analysis needs.  You should jump to the examples that interest you.</p>
+        <p>TODO</p>
+        
+        <footer>
+          Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+      </div>
+    </div>
+  </body>
+</html>
