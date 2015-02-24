@@ -12,8 +12,8 @@ Navigate to [http://www.auditmon.com/install.html](http://www.auditmon.com/insta
 
 ### Option B) Installing from Source
 
-1. Import the `com.ensoftcorp.open.auditmon` and `org.jfree` projects.
-2. Install the [Toolbox Commons](https://ensoftcorp.github.io/toolbox-commons/install.html) plugin dependency.
+1. Install the [Toolbox Commons](https://ensoftcorp.github.io/toolbox-commons/install.html) plugin dependency.
+2. Import the `com.ensoftcorp.open.auditmon` and `org.jfree` projects.
 3. Install the `com.ensoftcorp.open.auditmon` and `org.jfree` projects, by right clicking on a project and selecting `Export`.  Select `Plug-in Development`->`Deployable plug-ins and fragments`.  Make sure both the `com.ensoftcorp.open.auditmon` and `org.jfree` projects are checked and then select the `Install into host. Repository:` radio box and click `Finish`.  Press `OK` for the notice about unsigned software.  Once Eclipse restarts the plugin is installed.
 4. It is advisable to close or remove the `com.ensoftcorp.open.auditmon` and `org.jfree` projects from the workspace after installation.
 
